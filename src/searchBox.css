@@ -1,0 +1,144 @@
+.searchBox{
+    margin-bottom: 22px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 22px;
+    background: linear-gradient(180deg, rgba(12, 24, 42, 0.92), rgba(8, 16, 29, 0.92));
+    backdrop-filter: blur(18px);
+    box-shadow: 0 22px 64px rgba(0, 0, 0, 0.24);
+    color: #eef5ff;
+}
+
+.searchTopRow {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.searchTitleBlock h3 {
+    margin: 4px 0 0;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #f8fbff;
+}
+
+.searchKicker {
+    display: inline-block;
+    color: #9dc6ff;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    font-size: 0.72rem;
+}
+
+.searchForm {
+    display: grid;
+    gap: 16px;
+    margin-top: 0;
+}
+
+.unitToggle,
+.compactToggle {
+    width: fit-content;
+}
+
+.unitToggle .MuiToggleButton-root {
+    color: #d7e2f2;
+    border-color: rgba(255, 255, 255, 0.14);
+}
+
+.unitToggle .MuiToggleButton-root.Mui-selected {
+    background: linear-gradient(135deg, #58a6ff, #79d7ff);
+    color: #04111f;
+}
+
+.actionRow {
+    width: 100%;
+}
+
+.searchBox .MuiInputLabel-root {
+    color: #9fb7d5;
+}
+
+.searchBox .MuiInputLabel-root.Mui-focused {
+    color: #79d7ff;
+}
+
+.searchBox .MuiOutlinedInput-root {
+    color: #eef5ff;
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.searchBox .MuiOutlinedInput-notchedOutline {
+    border-color: rgba(255, 255, 255, 0.16);
+}
+
+.searchBox .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+    border-color: rgba(121, 215, 255, 0.5);
+}
+
+.searchBox .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: #79d7ff;
+}
+
+.searchBox .MuiInputBase-input::placeholder {
+    color: rgba(238, 245, 255, 0.7);
+    opacity: 1;
+}
+
+.searchBox .MuiButton-contained {
+    background: linear-gradient(135deg, #58a6ff, #79d7ff);
+    color: #03111f;
+    font-weight: 700;
+}
+
+.searchBox .MuiButton-outlined {
+    border-color: rgba(255, 255, 255, 0.18);
+    color: #eef5ff;
+}
+
+.searchError {
+    margin: 14px 0 0;
+    color: #ffb6bd;
+}
+
+.recentSearches {
+    margin-top: 18px;
+}
+
+.recentSearches p {
+    margin: 0 0 10px;
+    color: #ffffff;
+}
+
+.recentChipRow .MuiChip-root {
+    color: #ffffff;
+    border-color: rgba(121, 215, 255, 0.65);
+    background: rgba(121, 215, 255, 0.16);
+}
+
+.recentChipRow .MuiChip-root:hover {
+    background: rgba(121, 215, 255, 0.24);
+    border-color: rgba(121, 215, 255, 0.9);
+}
+
+.recentChipRow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+@media (max-width: 640px) {
+    .searchTopRow {
+        flex-direction: column;
+    }
+
+    .compactToggle {
+        width: 100%;
+    }
+
+    .compactToggle .MuiToggleButtonGroup-grouped {
+        flex: 1;
+    }
+}

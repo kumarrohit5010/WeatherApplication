@@ -1,0 +1,189 @@
+.infoBox{
+    margin: 0 auto 24px;
+}
+
+.cardContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.weatherCard {
+    width: min(100%, 760px);
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 28px !important;
+    background: linear-gradient(180deg, rgba(12, 22, 38, 0.96), rgba(8, 14, 26, 0.96)) !important;
+    color: #eef5ff !important;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 30px 90px rgba(0, 0, 0, 0.3) !important;
+}
+
+.weatherCard.sunny {
+    background: linear-gradient(180deg, rgba(58, 98, 149, 0.96), rgba(11, 18, 30, 0.96)) !important;
+}
+
+.weatherCard.cool {
+    background: linear-gradient(180deg, rgba(19, 36, 61, 0.96), rgba(10, 17, 29, 0.96)) !important;
+}
+
+.weatherCard.storm {
+    background: linear-gradient(180deg, rgba(39, 42, 58, 0.96), rgba(8, 11, 18, 0.96)) !important;
+}
+
+.weatherCardTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 28px 28px 0;
+}
+
+.locationBadge {
+    color: #8cc8ff !important;
+    letter-spacing: 0.18em !important;
+}
+
+.cityTitle {
+    margin-top: 4px !important;
+    font-weight: 700 !important;
+}
+
+.weatherSubtitle {
+    color: #adc0d6;
+    text-transform: capitalize;
+}
+
+.weatherIconWrap {
+    display: grid;
+    place-items: center;
+    width: 72px;
+    height: 72px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    color: #ffd56a;
+    flex: 0 0 auto;
+}
+
+.weatherConditionIcon {
+    width: 84px;
+    height: 84px;
+    display: block;
+    object-fit: contain;
+}
+
+.weatherFallbackIcon {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffd56a;
+}
+
+.weatherLoadingBar {
+    margin-top: 20px;
+}
+
+.weatherContent {
+    padding-top: 8px !important;
+}
+
+.temperatureBlock {
+    margin: 4px 0 22px;
+}
+
+.temperatureValue {
+    font-size: clamp(3.2rem, 10vw, 5.6rem) !important;
+    font-weight: 700 !important;
+    line-height: 0.95 !important;
+}
+
+.temperatureHint {
+    color: #adc0d6;
+}
+
+.statsGrid {
+    margin-top: 8px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.statCard {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.statCard span,
+.rangeGrid span {
+    display: block;
+    color: #9eb0c7;
+    font-size: 0.82rem;
+}
+
+.statCard strong,
+.rangeGrid strong {
+    display: block;
+    margin-top: 4px;
+    font-size: 1rem;
+}
+
+.weatherDivider {
+    margin: 22px 0 !important;
+    border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.rangeGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.rangeGrid > div {
+    padding: 14px 16px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.rangeGrid strong {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.lastUpdated {
+    margin-top: 18px !important;
+    color: #8ea3bc;
+}
+
+.errorState {
+    padding: 24px;
+    border-radius: 18px;
+    background: rgba(255, 109, 123, 0.12);
+    border: 1px solid rgba(255, 109, 123, 0.18);
+}
+
+@media (max-width: 640px) {
+    .infoBox {
+        margin: 0 auto 18px;
+    }
+
+    .weatherCardTop {
+        flex-direction: column;
+    }
+
+    .weatherCardTop,
+    .weatherContent {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
+    .rangeGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .statsGrid {
+        grid-template-columns: 1fr;
+    }
+}

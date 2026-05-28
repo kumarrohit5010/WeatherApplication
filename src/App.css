@@ -1,0 +1,50 @@
+body {
+  background: linear-gradient(
+    180deg,
+    rgba(14, 24, 42, 0.92),
+    rgba(8, 16, 29, 0.92)
+  );
+}
+#root {
+  width: 100%;
+}
+
+.weather-app-shell {
+  position: relative;
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 40px 0 56px;
+}
+
+.weather-app-shell::before,
+.weather-app-shell::after {
+  content: "";
+  position: absolute;
+  inset: auto;
+  border-radius: 999px;
+  filter: blur(16px);
+  pointer-events: none;
+}
+
+.weather-app-shell::before {
+  top: 20px;
+  left: -80px;
+  width: 180px;
+  height: 180px;
+  background: rgba(255, 195, 113, 0.24);
+}
+
+.weather-app-shell::after {
+  right: -60px;
+  bottom: 60px;
+  width: 220px;
+  height: 220px;
+  background: rgba(120, 177, 255, 0.18);
+}
+
+@media (max-width: 640px) {
+  .weather-app-shell {
+    width: min(100% - 1rem, 1120px);
+    padding-top: 22px;
+  }
+}
