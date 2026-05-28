@@ -2,10 +2,10 @@ import { useCallback, useEffect, useState } from "react"
 import InfoBox from "./InfoBox"
 import SearchBox from "./SearchBox"
 
-const API_URL = import.meta.env.WEATHER_URL ?? ""
-const API_KEY = import.meta.env.WEATHER_API_KEY ?? ""
+const API_URL = import.meta.env.VITE_WEATHER_URL ?? ""
+const API_KEY = import.meta.env.VITE_WEATHER_API_KEY ?? ""
 const DEFAULT_CITY = "Kathmandu"
-const RECENT_SEARCHES_KEY = import.meta.env.WEATHER_SEARCH_KEY ?? "recentSearches"
+const RECENT_SEARCHES_KEY = import.meta.env.VITE_WEATHER_SEARCH_KEY ?? "recentSearches"
 
 function buildWeatherInfo(jsonResponse, cityName) {
     const primaryWeather = jsonResponse.weather?.[0] ?? {}
