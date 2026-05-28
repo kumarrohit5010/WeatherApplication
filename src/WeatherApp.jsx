@@ -2,10 +2,10 @@ import { useCallback, useEffect, useState } from "react"
 import InfoBox from "./InfoBox"
 import SearchBox from "./SearchBox"
 
-const API_URL = "https://api.openweathermap.org/data/2.5/weather"
-const API_KEY = "dbbe77426d64be7b4525b6a06b10dd01"
+const API_URL = import.meta.env.VITE_WEATHER_URL ?? ""
+const API_KEY = import.meta.env.VITE_WEATHER_API_KEY ?? ""
 const DEFAULT_CITY = "Kathmandu"
-const RECENT_SEARCHES_KEY = "weather-app-recent-searches"
+const RECENT_SEARCHES_KEY = import.meta.env.VITE_WEATHER_SEARCH_KEY ?? "recentSearches"
 
 function buildWeatherInfo(jsonResponse, cityName) {
     const primaryWeather = jsonResponse.weather?.[0] ?? {}
@@ -70,6 +70,11 @@ export default function WeatherApp(){
     }, [])
 
     const fetchWeatherByCity = async (cityName, requestedUnit, shouldStoreSearch = true) => {
+        if (!API_URL || !API_KEY) {
+            setError("Weather API not configured. Set VITE_WEATHER_URL and VITE_WEATHER_API_KEY.")
+            return
+        }
+
         try {
             setLoading(true)
             setError("")
@@ -115,6 +120,11 @@ export default function WeatherApp(){
     }, [])
 
     const fetchWeatherByCoordinates = async (latitude, longitude) => {
+        if (!API_URL || !API_KEY) {
+            setError("Weather API not configured. Set VITE_WEATHER_URL and VITE_WEATHER_API_KEY.")
+            return
+        }
+
         try {
             setLoading(true)
             setError("")
