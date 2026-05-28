@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0" stop-color="#FFD26A"/>
+      <stop offset="1" stop-color="#FFB347"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="8" fill="transparent"/>
+  <!-- Sun -->
+  <g transform="translate(18,14)">
+    <circle cx="10" cy="10" r="6" fill="url(#g)" />
+    <g stroke="#FFB347" stroke-width="1.6" stroke-linecap="round">
+      <line x1="10" y1="-4" x2="10" y2="-8" />
+      <line x1="10" y1="24" x2="10" y2="28" />
+      <line x1="-4" y1="10" x2="-8" y2="10" />
+      <line x1="28" y1="10" x2="32" y2="10" />
+      <line x1="3" y1="3" x2="0" y2="0" />
+      <line x1="17" y1="3" x2="20" y2="0" />
+      <line x1="3" y1="17" x2="0" y2="20" />
+      <line x1="17" y1="17" x2="20" y2="20" />
+    </g>
+  </g>
+  <!-- Cloud -->
+  <g transform="translate(24,28)">
+    <path d="M6 12h28a8 8 0 0 0 0-16 11 11 0 0 0-21-2 6 6 0 0 0-6 6c0 3.3 2.7 6 6 6z" fill="#E6EEF7" stroke="#BFD7F5" stroke-width="1"/>
+  </g>
+</svg>
